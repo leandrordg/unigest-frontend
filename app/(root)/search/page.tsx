@@ -1,16 +1,13 @@
 "use client";
 
-import { MainCard } from "@/components/ui/main-card";
-import { sidebarLinks } from "@/links/sidebar";
 import { useSearchParams } from "next/navigation";
 
-interface PageProps {
-  params: {
-    q: string;
-  };
-}
+import { MainCard } from "@/components/ui/main-card";
+import { sidebarLinks } from "@/links/sidebar";
 
-export default function Page({ params: { q } }: PageProps) {
+interface PageProps {}
+
+export default function Page({}: PageProps) {
   const searchParams = useSearchParams();
   const query = searchParams.get("q");
 
